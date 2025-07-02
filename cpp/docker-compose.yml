@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  cpp-dev:
+    image: alpine:latest
+    container_name: cpp_dev_container
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: /bin/sh -c "apk update && apk add --no-cache g++ make cmake && tail -f /dev/null"

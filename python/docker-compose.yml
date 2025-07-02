@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  python-dev:
+    image: python:latest
+    container_name: python_dev_container
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    command: /bin/sh
+
+  
